@@ -37,7 +37,7 @@ services:
       - ./config/docker-nginx.conf.template:/docker/nginx.conf.template
       - ./config/docker-nginx.rails.conf:/etc/nginx/conf.d/rails.conf
   postgres:
-    image: postgres:latest
+    image: postgres:9.5
     ports:
       - '5432:5432'
     volumes:
