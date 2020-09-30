@@ -42,14 +42,16 @@ services:
       - '5432:5432'
     volumes:
       - postgres:/var/lib/postgresql/data
+    environment:
+      - POSTGRES_PASSWORD=password
   rails:
     build: .
-    command: bin/docker-start-rails
+    command: bash -c "bundle && bundle exec puma"
     environment:
       - ELASTICSEARCH_HOST=elasticsearch
       - LOGSTASH_HOST=logstash
       - POSTGRESHOST=postgres
-      - POSTGRESPASS=
+      - POSTGRESPASS=password
       - POSTGRESUSER=postgres
       - RAILS_ENV=development
     ports:
