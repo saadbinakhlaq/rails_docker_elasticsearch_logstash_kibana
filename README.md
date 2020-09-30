@@ -1,5 +1,19 @@
 # Integrate Rails logs with Elasticsearch, Logstash, and Kibana in Docker Compose
 
+# Installation
+
+```
+$ docker-compose build
+$ docker-compose run rails bundle rake db:create
+$ docker-compose run rails bundle exec db:schema:load
+```
+
+Running the server
+
+```
+$ docker-compose up
+```
+
 # Simulate Requests
 docker exec -it docker-rails-elasticsearch-logstash-kibana_rails_1 rake simulate:traffic
 
