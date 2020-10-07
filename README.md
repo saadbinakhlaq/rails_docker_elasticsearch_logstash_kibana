@@ -4,8 +4,8 @@
 
 ```
 $ docker-compose build
-$ docker-compose run rails bundle rake db:create
-$ docker-compose run rails bundle exec db:schema:load
+$ docker-compose run rails bundle exec rake db:create
+$ docker-compose run rails bundle exec rake db:schema:load
 ```
 
 Running the server
