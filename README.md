@@ -15,7 +15,7 @@ $ docker-compose up
 ```
 
 # Simulate Requests
-docker exec -it docker-rails-elasticsearch-logstash-kibana_rails_1 rake simulate:traffic
+docker exec rails_docker_elasticsearch_logstash_kibana_rails_1 rake simulate:traffic
 
 # Check kibana
 open "http://localhost:5601"
